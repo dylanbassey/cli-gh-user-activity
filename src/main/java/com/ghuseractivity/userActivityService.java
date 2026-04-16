@@ -61,7 +61,7 @@ public class userActivityService implements Runnable {
 
         switch (type) {
             case "PushEvent":
-                int commits = payload.path("size").asInt(0); // default 0
+                int commits = payload.path("size").asInt(1); // default 0
                 return "Pushed " + commits + " commits to " + repo;
 
             case "IssuesEvent":
